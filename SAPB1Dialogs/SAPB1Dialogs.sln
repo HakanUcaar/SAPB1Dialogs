@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPB1Dialogs", "SAPB1Dialogs\SAPB1Dialogs.csproj", "{2A015CA3-06A7-4AD3-9A3C-4E3073FE7598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPB1Dialogs.Demo", "SAPB1Dialogs.Demo\SAPB1Dialogs.Demo.csproj", "{06B0C432-7E5D-4877-B6B7-1FC0B95396F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A015CA3-06A7-4AD3-9A3C-4E3073FE7598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A015CA3-06A7-4AD3-9A3C-4E3073FE7598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A015CA3-06A7-4AD3-9A3C-4E3073FE7598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A015CA3-06A7-4AD3-9A3C-4E3073FE7598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B0C432-7E5D-4877-B6B7-1FC0B95396F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B0C432-7E5D-4877-B6B7-1FC0B95396F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B0C432-7E5D-4877-B6B7-1FC0B95396F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B0C432-7E5D-4877-B6B7-1FC0B95396F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
