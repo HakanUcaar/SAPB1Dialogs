@@ -75,27 +75,10 @@ namespace SAPB1Dialogs
 
             oForm = SAPMainApp.Forms.AddEx(formDefinition);
             //oForm.Title = "Lütfen bilgi girin";
-            oForm.Height = 170;
-            oForm.Width = 288;
-
 
             //  Create the form GUI elements
             oForm.AutoManaged = true;
             oForm.SupportedModes = 0;
-
-            ButonOk = oForm.Items.Add("OK", SAPbouiCOM.BoFormItemTypes.it_BUTTON).ItemCast<SAPbouiCOM.Button>();
-            ButonOk.Caption = "Tamam";
-            ButonOk.Item.Top = 100;
-            ButonOk.Item.Left = 10;
-
-            ButonOk.ClickBefore += ButonOk_ClickBefore;
-
-            ButonCancel = oForm.Items.Add("CANCEL", SAPbouiCOM.BoFormItemTypes.it_BUTTON).ItemCast<SAPbouiCOM.Button>();
-            ButonCancel.Caption = "İptal";
-            ButonCancel.Item.Top = 100;
-            ButonCancel.Item.Left = ButonOk.Item.Left + ButonOk.Item.Width + 8;
-
-            ButonCancel.ClickBefore += ButonCancel_ClickBefore;
 
             oItem = oForm.Items.Add("TabControl", SAPbouiCOM.BoFormItemTypes.it_FOLDER);
             oItem.Top = 10;
@@ -111,12 +94,12 @@ namespace SAPB1Dialogs
 
                 oItem = oForm.Items.Add("InputL" + i.ToString(), SAPbouiCOM.BoFormItemTypes.it_STATIC);
                 oItem.ItemCast<SAPbouiCOM.StaticText>().Caption = Inputs[CurrentIndex].LabelCaption != null ? Inputs[CurrentIndex].LabelCaption :  i.ToString() + ". değerin bilgileri giriniz";
-                oItem.Top = 25 + (i * 17);
+                oItem.Top =  (i * 17);
                 oItem.Width = 80;
                 oItem.Left = 10;
 
                 oItem = oForm.Items.Add("Input" + i.ToString(), Inputs[CurrentIndex].ItemType);
-                oItem.Top = 25 + (i * 17);
+                oItem.Top =  (i * 17);
                 oItem.Width = 150;
                 oItem.Left = 100;
 
@@ -182,6 +165,23 @@ namespace SAPB1Dialogs
                     DataBindType.InvokeMember("SetBound", BindingFlags.InvokeMethod, null, GetMemberValue, new object[] { true, "", "UD" + i.ToString() });
                 }
             }
+
+            ButonOk = oForm.Items.Add("OK", SAPbouiCOM.BoFormItemTypes.it_BUTTON).ItemCast<SAPbouiCOM.Button>();
+            ButonOk.Caption = "Tamam";
+            ButonOk.Item.Top = oItem.Top + 20;
+            ButonOk.Item.Left = 10;
+
+            ButonOk.ClickBefore += ButonOk_ClickBefore;
+
+            ButonCancel = oForm.Items.Add("CANCEL", SAPbouiCOM.BoFormItemTypes.it_BUTTON).ItemCast<SAPbouiCOM.Button>();
+            ButonCancel.Caption = "İptal";
+            ButonCancel.Item.Top = oItem.Top + 20;
+            ButonCancel.Item.Left = ButonOk.Item.Left + ButonOk.Item.Width + 5;
+
+            ButonCancel.ClickBefore += ButonCancel_ClickBefore;
+
+            oForm.Height = ButonOk.Item.Top + 75 ;
+            oForm.Width = 288;
 
             oForm.Visible = true;
         }

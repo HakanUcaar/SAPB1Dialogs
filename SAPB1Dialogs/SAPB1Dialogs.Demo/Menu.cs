@@ -47,6 +47,12 @@ namespace SAPB1Dialogs.Demo
                 oCreationPackage.UniqueID = "SAPB1Dialogs.Demo.Form1";
                 oCreationPackage.String = "Form1";
                 oMenus.AddEx(oCreationPackage);
+
+                // Create s sub menu
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                oCreationPackage.UniqueID = "SAPB1Dialogs.Demo.Form2";
+                oCreationPackage.String = "Form2";
+                oMenus.AddEx(oCreationPackage);
             }
             catch (Exception er)
             { //  Menu already exists
@@ -63,6 +69,12 @@ namespace SAPB1Dialogs.Demo
                 if (pVal.BeforeAction && pVal.MenuUID == "SAPB1Dialogs.Demo.Form1")
                 {
                     Form1 activeForm = new Form1();
+                    activeForm.Show();
+                }
+
+                if (pVal.BeforeAction && pVal.MenuUID == "SAPB1Dialogs.Demo.Form2")
+                {
+                    Form2 activeForm = new Form2();
                     activeForm.Show();
                 }
             }
