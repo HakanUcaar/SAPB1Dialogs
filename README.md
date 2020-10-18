@@ -1,5 +1,5 @@
 # SAPB1Dialogs
-SAP Business One dilog form oluşturma kütüphanesi
+SAP Business One dialog form oluşturma kütüphanesi
 
 ## Örnek Dialog Oluşturma Kodu
 ```CSharp
